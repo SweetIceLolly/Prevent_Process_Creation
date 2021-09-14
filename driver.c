@@ -45,7 +45,7 @@ DriverEntry(
 
 	DbgPrint("Driver loaded!\n");
 
-	// https://webcache.googleusercontent.com/search?q=cache:4vxTVzmlrd4J:https://bitnuts.de/articles/blocking_process_creation_using_a_windows_kernel_driver.html+&cd=11&hl=en&ct=clnk&gl=ca
+	// Blocking Process Creation using a Windows Kernel Driver: https://web.archive.org/web/20170222104033/http://bitnuts.de/archive_2014.html
 	NTSTATUS result;
 	result = PsSetCreateProcessNotifyRoutineEx(PcreateProcessNotifyRoutineEx, FALSE);
 	if (STATUS_SUCCESS == result) {
